@@ -19,7 +19,9 @@ abstract class BaseFragment : Fragment() {
 
     abstract fun initView()
 
-    abstract fun observeData()
+    open fun observeData(){
+
+    }
 
     open fun initData() {
 
