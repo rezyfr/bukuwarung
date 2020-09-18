@@ -40,6 +40,7 @@ class UserAdapter(
                 .load(data.avatar)
                 .into(itemView.iv_avatar)
             itemView.tv_name.text = "${data.first_name} ${data.last_name}"
+            itemView.tv_email.text = "${data.email}"
 
             itemView.setOnClickListener {
                 listener(data)

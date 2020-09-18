@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".views.userdetail.UserDetailActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -21,15 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="Edit Profile"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_avatar"
@@ -52,14 +44,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Name"
+                        android:text="Nama"
                         android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/tv_nama"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fidriyanto Rizkillah"
                         android:textColor="@color/colorTextBlack"
                         android:textSize="16sp" />
 
@@ -91,7 +82,6 @@
                         android:id="@+id/tv_email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="frizkillah98@gmail.com"
                         android:textColor="@color/colorTextBlack"
                         android:textSize="16sp" />
 
@@ -103,17 +93,5 @@
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_confirm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            android:background="@drawable/btn_yellow"
-            android:text="Confirm"
-            android:textAllCaps="false"
-            android:textColor="@color/colorWhite"
-            android:visibility="gone" />
     </RelativeLayout>
 </LinearLayout>

@@ -9,4 +9,7 @@ import com.example.bukuwarungtest.data.model.User
 interface UserDao : BaseDao<User> {
     @Query("SELECT * FROM `User` ORDER BY first_name ASC")
     suspend fun getUserList(): List<User>
+
+    @Query("SELECT * FROM `User` WHERE id = :id")
+    suspend fun getUserById(id: Int): User
 }

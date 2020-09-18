@@ -6,11 +6,8 @@ import com.example.bukuwarungtest.R
 import com.example.bukuwarungtest.base.BaseActivity
 import com.example.bukuwarungtest.views.home.HomeFragment
 import com.example.bukuwarungtest.views.profile.ProfileFragment
-import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.iid.FirebaseInstanceId
 import kotlinx.android.synthetic.main.activity_main.*
-import timber.log.Timber
 
 class MainActivity : BaseActivity() {
     override fun layoutRes() = R.layout.activity_main
@@ -34,17 +31,6 @@ class MainActivity : BaseActivity() {
         })
         val fragment = HomeFragment.newInstance()
         addFragment(fragment)
-        FirebaseInstanceId.getInstance().instanceId
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    return@OnCompleteListener
-                }
-
-                // Get new Instance ID token
-                val token = task.result?.token
-
-                Timber.d("INItoken: $token")
-            })
     }
 
     @SuppressLint("PrivateResource")

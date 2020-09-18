@@ -23,7 +23,7 @@ data class Ad(
 @Parcelize
 @Entity
 data class User(
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey(autoGenerate = true)
     var id: Int? = 0,
     var first_name: String? = "",
     var last_name: String? = "",

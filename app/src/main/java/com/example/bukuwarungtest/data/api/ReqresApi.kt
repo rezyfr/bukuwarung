@@ -7,6 +7,6 @@ import retrofit2.http.Query
 
 interface ReqresApi {
     @GET("api/users")
-    suspend fun getCryptoList(
+    suspend fun fetchUser(
     ): Response<UserModel>
 }
